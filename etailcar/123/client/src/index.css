@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+th,
+li,
+ul,textarea,
+ol {
+  font-size: 12px !important;
+}
+
+input,
+label,
+td {
+  font-size: 12px !important;
+}
+
+p {
+  font-size: 12px !important;
+}
+
+.bgxanhhihi {
+  background: #0a9dd8;
+  overflow-x: hidden;
+  margin-top: 300px;
+  width: 99vw;
+}
+
+.row {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.bgxanhhihi .box_footer {
+}
+
+.box_footer {
+  float: left;
+  width: 300px;
+  padding: 10px;
+  color: #fcfcfc;
+}
+.box_footer1 {
+  width: 423px;
+}
+
+.box_footer2 {
+  width: 200px;
+}
+
+.bgxanhhihi .box_footer {
+  max-width: 100%;
+}
+
+.box_footer {
+  float: left;
+  width: 300px;
+  padding: 10px;
+  color: #fcfcfc;
+}
+
+.tit_footer {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  background: #00000047;
+  padding: 10px 10px 7px 10px;
+  margin-bottom: 15px;
+}
+
+.phone345 {
+  bottom: 60px;
+  right: 10px;
+  position: fixed;
+  z-index: 1000;
+}
+
+.phone345 a.HotlineChantrang {
+  background-color: #da0e00;
+  box-shadow: 1px 1px 4px #0d4d79;
+}
+
+a.HotlineChantrang {
+  background: #da0e00 url(http://hoamaitour.com/layouts/mobile-phone.png)
+    no-repeat center left 10px;
+  padding: 10px 10px 10px 40px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 1px 1px 4px #554;
+}
+
+.thumbnail,
+.img-thumbnail {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.175);
+}
+
+.thumbnail > img,
+.thumbnail a > img {
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #fff;
+  padding: 0px 2px;
+  max-height: 167.28px;
+}
+.tenspduc {
+  float: left;
+  margin: 10px 0;
+  text-align: left;
+  padding: 0px 10px;
+  font-weight: 600;
+  height: 42px;
+  overflow: hidden;
+}
+.namepriceduc {
+  padding: 0px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tenspduc a {
+  color: #007fc2;
+  font-size: 14px;
+}
+
+
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 70vh;
+}
+
+.screen {		
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
+	position: relative;	
+	height: 600px;
+	width: 360px;	
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;	
+	text-shadow: 0px 0px 8px #7875B5;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);	
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.pro-card-head-extra {
+    position: relative;
+	display: flex;
+
+}
+#myInputsph {
+    transition: border 0.1s ease, box-shadow 0.1s ease;
+	margin-left: auto;
+}
+ .pro-card-head-extra input {
+    width: 300px;
+    padding: 0 10px;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+}
+[type="text"], [type="email"], [type="password"], [type="tel"], [type="number"], [type="date"] {
+    height: 36px;
+    padding-left: 16px;
+    padding-right: 14px;
+    background: #FEFEFE;
+    border-width: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    border-radius: 0;
+    width: 100%;
+    border-radius: 4px;
+}
+
+ .search-icon-sub {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 20px;
+    background-image: url('https://giadinhviet.com/wp-content/uploads/2020/03/ezgif-7-c510e78947.gif');
+    background-size: cover;
+    pointer-events: none;
+}
+
+
+.container-form-contract .css-1jk99ih-MuiInputBase-input-MuiOutlinedInput-input {
+  font-size: 16px !important;
+  
+}
+
+.container-form-contract .css-18pjc51-MuiFormLabel-root-MuiInputLabel-root {
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+
+
+/* Container cho toàn bộ phần danh sách */
+.most-rented-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Thiết kế từng xe */
+.cars-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.car-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px); /* Tính toán kích thước của từng item */
+  max-width: calc(33.333% - 20px);
+  transition: transform 0.2s;
+}
+
+.car-item:hover {
+  transform: translateY(-5px); /* Hiệu ứng hover */
+}
+
+.car-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.car-details {
+  font-size: 1rem;
+  color: #555;
+}
+
+.rent-count {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.price {
+  display: block;
+  color: #28a745;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .car-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .car-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.swiper-pagination {
+  display: none;
+}
