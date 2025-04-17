@@ -2,7 +2,7 @@ import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
 import { CarModel } from "./models/CarModel.js";
-import data from "./rentcar.json" with { type: "json" };
+import data from "./rentProduct.json" with { type: "json" };
 import cars from "./routers/cars.js";
 import contracts from "./routers/contracts.js";
 import detailscontracts from "./routers/detailscontracts.js";
@@ -53,8 +53,8 @@ const importData = async () => {
           updatedAt,
         });
       }
-
-      // Chỉ chèn vào cơ sở dữ liệu nếu dữ liệu hợp lệ
+lệ
+      // Chỉ chèn vào cơ sở dữ liệu nếu dữ liệu hợp 
       if (formattedData.length > 0) {
         await CarModel.insertMany(formattedData);
         console.log("Data imported successfully");

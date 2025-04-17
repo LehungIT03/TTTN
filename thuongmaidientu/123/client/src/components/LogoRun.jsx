@@ -1,8 +1,11 @@
-import img1 from "../assets/logo-bmw.jpg";
-import img2 from "../assets/logo-mazda.jpg";
-import img3 from "../assets/logo-nissan.jpg";
-import img4 from "../assets/brasol.vn-logo-huyndai-huyndai.jpg";
-import img5 from "../assets/logovw.jpg";
+import img1 from "../assets/logo-dell.png";
+import img2 from "../assets/logo-lenovo.jpg";
+import img3 from "../assets/logo-asus.png";
+import img4 from "../assets/logo-canon.jpg";
+import img5 from "../assets/logo-hp.png";
+import img6 from "../assets/logo-nikon.jpg";
+
+
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -61,6 +64,9 @@ const LogoRun = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={img3} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img6} alt="" />
         </SwiperSlide>
       </Swiper>
     </>

@@ -71,133 +71,118 @@ const CardRented = () => {
       </div>
     );
   return (
-    <div  className='w-[80vw] flex flex-col mx-auto '>
+    <div className="w-[80vw] flex flex-col mx-auto ">
       <Header />
-      <div className="flex flex-col gap-6" style={{gap: '24px', display: 'flex'}}>
+      <div
+        className="flex flex-col gap-6"
+        style={{ gap: "24px", display: "flex" }}
+      >
         <div className="flex flex-col gap-6" style={{ margin: "0 5%" }}>
-        <h1 className="mb-10 ">Danh sách xe đang thuê</h1>
+          <h1 className="mb-10 ">Danh sách sản phẩm đang thuê</h1>
           {dataCar?.contracts?.map((item) => (
             <div className="bg-gray-100 border-[1px] p-3 shadow-md border-gray-500  flex  gap-10  rounded-md w-full ">
               <div className="">
-              <p>Trạng thái: {item?.status}</p>
-              <p>Tông tiền: {item?.totalprice}</p>
-              <p>
-                Số này thuê:{" "}
+                <p>Trạng thái: {item?.status}</p>
+                <p>Tông tiền: {item?.totalprice}</p>
+                <p>
+                  Số ngày thuê:{" "}
+                  {
+                    dataCar?.detailsContracts?.find(
+                      (el) => item?._id == el?.contractid
+                    )?.dayrent
+                  }
+                </p>
+                <p>
+                  Trả trước:
+                  {
+                    dataCar?.detailsContracts?.find(
+                      (el) => item?._id == el?.contractid
+                    )?.deposits
+                  }
+                </p>
+                <p>
+                  Hãng sản phẩm:{" "}
+                  {
+                    dataCar?.cardDetail?.find(
+                      (el) =>
+                        dataCar?.detailsContracts?.find(
+                          (el) => item?._id == el?.contractid
+                        )?.carid == el?._id
+                    )?.carcompany
+                  }
+                </p>
+                <p>
+                  Tên sản phẩm:{" "}
+                  {
+                    dataCar?.cardDetail?.find(
+                      (el) =>
+                        dataCar?.detailsContracts?.find(
+                          (el) => item?._id == el?.contractid
+                        )?.carid == el?._id
+                    )?.carname
+                  }
+                </p>
+                <p>
+                  Loại sản phẩm:{" "}
+                  {
+                    dataCar?.cardDetail?.find(
+                      (el) =>
+                        dataCar?.detailsContracts?.find(
+                          (el) => item?._id == el?.contractid
+                        )?.carid == el?._id
+                    )?.cartype
+                  }
+                </p>
+                <p>
+                  Đơn giá:{" "}
+                  {
+                    dataCar?.cardDetail?.find(
+                      (el) =>
+                        dataCar?.detailsContracts?.find(
+                          (el) => item?._id == el?.contractid
+                        )?.carid == el?._id
+                    )?.pricerent
+                  }
+                </p>
+                <p>Số điện thoại: {item.phone}</p>
+                <p>Địa chỉ nhận sản phẩm: {item.address}</p>
+                <p>Tên người nhận: {item.name}</p>
+                <p>Ngày thuê: {item.getCarDate}</p>
+                <p>Ngày trả sản phẩm: {item.carReturnDate}</p>
                 {
-                  dataCar?.detailsContracts?.find(
-                    (el) => item?._id == el?.contractid
-                  )?.dayrent
+                  <Button
+                    disabled={item?.status !== "Chờ duyệt đặt cọc"}
+                    className=""
+                    onClick={() => handleOpenDialog(item)}
+                    variant="contained"
+                    color="primary"
+                  >
+                    Hủy đặt sản phẩm
+                  </Button>
                 }
-              </p>
-              <p>
-                Trả trước:
-                {
-                  dataCar?.detailsContracts?.find(
-                    (el) => item?._id == el?.contractid
-                  )?.deposits
-                }
-              </p>
-              <p>
-                Hãng xe:{" "}
-                {
-                  dataCar?.cardDetail?.find(
-                    (el) =>
-                      dataCar?.detailsContracts?.find(
-                        (el) => item?._id == el?.contractid
-                      )?.carid == el?._id
-                  )?.carcompany
-                }
-              </p>
-              <p>
-                Tên xe:{" "}
-                {
-                  dataCar?.cardDetail?.find(
-                    (el) =>
-                      dataCar?.detailsContracts?.find(
-                        (el) => item?._id == el?.contractid
-                      )?.carid == el?._id
-                  )?.carname
-                }
-              </p>
-              <p>
-                Loại xe:{" "}
-                {
-                  dataCar?.cardDetail?.find(
-                    (el) =>
-                      dataCar?.detailsContracts?.find(
-                        (el) => item?._id == el?.contractid
-                      )?.carid == el?._id
-                  )?.cartype
-                }
-              </p>
-              <p>
-                Đơn giá:{" "}
-                {
-                  dataCar?.cardDetail?.find(
-                    (el) =>
-                      dataCar?.detailsContracts?.find(
-                        (el) => item?._id == el?.contractid
-                      )?.carid == el?._id
-                  )?.pricerent
-                }
-              </p>
-              <p>
-                Số điện thoại:{" "}
-                {
-                  item.phone
-                }
-              </p>
-              <p>
-              Địa chỉ nhận xe:{" "}
-                {
-                  item.address
-                }
-              </p>
-              <p>
-                Tên người nhận:{" "}
-                {
-                  item.name
-                }
-              </p>
-              <p>
-                Ngày thuê:{" "}
-                {
-                  item.getCarDate
-                }
-              </p>
-              <p>
-                Ngày trả xe:{" "}
-                {
-                  item.carReturnDate
-                }
-              </p>
-              { <Button disabled={item?.status !== 'Chờ duyệt đặt cọc'}
-                className=""
-                onClick={() => handleOpenDialog(item)}
-                variant="contained"
-                color="primary"
-              >
-                Hủy đặt xe
-              </Button>}
               </div>
               <div>
-                <img className="h-[120px] rounded-xl w-[120px]" src={dataCar?.cardDetail?.find(
-                    (el) =>
-                      dataCar?.detailsContracts?.find(
-                        (el) => item?._id == el?.contractid
-                      )?.carid == el?._id
-                  )?.image} />
+                <img
+                  className="h-[120px] rounded-xl w-[120px]"
+                  src={
+                    dataCar?.cardDetail?.find(
+                      (el) =>
+                        dataCar?.detailsContracts?.find(
+                          (el) => item?._id == el?.contractid
+                        )?.carid == el?._id
+                    )?.image
+                  }
+                />
               </div>
-           
             </div>
           ))}
         </div>
       </div>
       <Dialog open={open} onClose={handleCloseDialog}>
-        <DialogTitle>Hủy đặt xe</DialogTitle>
+        <DialogTitle>Hủy đặt sản phẩm</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Bạn có chắc chắn muốn hủy xe này{" "}
+            Bạn có chắc chắn muốn hủy sản phẩm này{" "}
             {selectedCar && selectedCar.carname} không?
           </DialogContentText>
         </DialogContent>

@@ -27,8 +27,8 @@ const AdminPage = () => {
             orientation="vertical"
           >
             <Tab sx={{fontSize: '12px'}} label="Thống kê dữ liệu"/>
-            <Tab sx={{fontSize: '12px'}}  label="Quản lý xe" />
-            <Tab label="Quản lý thuê xe" sx={{fontSize: '12px'}} />
+            <Tab sx={{fontSize: '12px'}}  label="Quản lý sản phẩm" />
+            <Tab label="Quản lý thuê sản phẩm" sx={{fontSize: '12px'}} />
             <Tab label="Hóa đơn" sx={{fontSize: '12px'}} />
           </Tabs>
         </div>

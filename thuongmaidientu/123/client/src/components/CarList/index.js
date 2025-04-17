@@ -7,7 +7,7 @@ import { carsState$ } from "../../redux/selectors";
 export default function CarList() {
   const dispatch = useDispatch();
   const cars = useSelector(carsState$);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [carList, setCarList] = useState([]);
 
   useEffect(() => {
@@ -16,8 +16,12 @@ export default function CarList() {
 
   useEffect(() => {
     // Lọc danh sách xe khi tìm kiếm thay đổi
-    if (search !== '') {
-      setCarList(cars.filter(item => item.carname?.toLowerCase().includes(search?.toLowerCase())));
+    if (search !== "") {
+      setCarList(
+        cars.filter((item) =>
+          item.carname?.toLowerCase().includes(search?.toLowerCase())
+        )
+      );
     } else {
       // Nếu không có tìm kiếm, hiển thị tất cả các xe
       setCarList(cars);
@@ -27,11 +31,11 @@ export default function CarList() {
   return (
     <div>
       <div className="pro-card-head-extra my-10">
-        <input 
-          value={search} 
-          onChange={e => setSearch(e.target.value)}
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           type="text"
-          placeholder="Tìm xe nổi bật của bạn"
+          placeholder="Tìm sản phẩm nổi bật của bạn"
           className="ml-auto"
         />
         <div className="search-icon-sub"></div>

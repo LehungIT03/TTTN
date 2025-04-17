@@ -77,7 +77,7 @@ const RentCarAdmin = () => {
     return (
         <div className="mx-[5%]" style={{overflowY: 'scroll', height: '100vh'}}>
             <div className="flex flex-col gap-6" style={{gap: '25px', display: 'flex', flexDirection: 'column'}}>
-                <h1 className="text-[16px]">Danh sách xe đang thuê</h1>
+                <h1 className="text-[16px]">Danh sách sản phẩm đang thuê</h1>
                 {dataCar?.contracts?.map((item) => (
                     <div style={{margin: '16px', padding: '16px', border: '1px solid  #ccc'}} key={item._id} className="bg-gray-100 border-[1px]  shadow-md border-gray-500 rounded-md w-full">
                         <p>Trạng thái: {item?.status}</p>
@@ -99,7 +99,7 @@ const RentCarAdmin = () => {
                             }
                         </p>
                         <p>
-                            Hãng xe:{" "}
+                            Hãng sản phẩm:{" "}
                             {
                                 dataCar?.cardDetail?.find(
                                     (el) =>
@@ -110,7 +110,7 @@ const RentCarAdmin = () => {
                             }
                         </p>
                         <p>
-                            Tên xe:{" "}
+                            Tên sản phẩm:{" "}
                             {
                                 dataCar?.cardDetail?.find(
                                     (el) =>
@@ -121,7 +121,7 @@ const RentCarAdmin = () => {
                             }
                         </p>
                         <p>
-                            Loại xe:{" "}
+                            Loại sản phấmphấ<meta name="description" content="" />:{" "}
                             {
                                 dataCar?.cardDetail?.find(
                                     (el) =>
@@ -148,20 +148,20 @@ const RentCarAdmin = () => {
                             value={statusRentCar[item._id] || item.status}
                             onChange={(e) => handleChangeStatus(e, item)}
                         >
-                            <MenuItem disabled={item.status == 'Đã đặt cọc' || item.status == 'Đã lấy xe' || item.status == 'Đã trả xe và thanh toán'} value={"Chờ duyệt đặt cọc"}>Chờ duyệt đặt cọc</MenuItem>
-                            <MenuItem disabled={item.status == 'Đã lấy xe' || item.status == 'Đã trả xe và thanh toán'} value={"Đã đặt cọc"}>Đã đặt cọc</MenuItem>
-                            <MenuItem disabled={item.status == 'Đã trả xe và thanh toán'} value={"Đã lấy xe"}>Lấy xe</MenuItem>
-                            <MenuItem disabled={item.status == 'Đã trả xe và thanh toán'} value={"Đã trả xe và thanh toán"}>Đã trả xe và thanh toán</MenuItem>
+                            <MenuItem disabled={item.status == 'Đã đặt cọc' || item.status == 'Đã lấy' || item.status == 'Đã trả và thanh toán'} value={"Chờ duyệt đặt cọc"}>Chờ duyệt đặt cọc</MenuItem>
+                            <MenuItem disabled={item.status == 'Đã lấy' || item.status == 'Đã trả và thanh toán'} value={"Đã đặt cọc"}>Đã đặt cọc</MenuItem>
+                            <MenuItem disabled={item.status == 'Đã trả và thanh toán'} value={"Đã lấy"}>Lấy sản phẩm</MenuItem>
+                            <MenuItem disabled={item.status == 'Đã trả và thanh toán'} value={"Đã trả và thanh toán"}>Đã trả và thanh toán</MenuItem>
                         </Select>
                     </div>
                 ))}
             </div>
 
             <Dialog open={open} onClose={handleCloseDialog}>
-                <DialogTitle>Hủy đặt xe</DialogTitle>
+                <DialogTitle>Hủy đặt sản phẩm</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        Bạn có chắc chắn muốn hủy xe này {selectedCar && selectedCar.carname} không?
+                        Bạn có chắc chắn muốn hủy sản phẩm này {selectedCar && selectedCar.carname} không?
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>

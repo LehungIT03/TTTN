@@ -69,13 +69,13 @@ const CardDetail = () => {
 
           <div class="col-xs-12 col-md-6">
             <div class="col-xs-12 col-md-12">
-              Đặt xe xin gọi:{" "}
+              Đặt sản phẩm xin gọi:{" "}
               <a
-                href="tel:0913218772"
+                href="tel:0876783210"
                 color="#990000"
                 style={{'font-weight':'bold'}}
               >
-                0389165923
+                0876783210
               </a>
             </div>
 
@@ -83,7 +83,7 @@ const CardDetail = () => {
               <span style={{'font-weight':'bold'}}>
                 Quý khách có thể liên hệ dịch vụ
                 <b style={{color:'#f00'}}>
-                  Cho thuê xe {dataCar.carname}
+                  Cho thuê sản phẩm {dataCar.carname}
                 </b>{" "}
                 bằng các phương thức:
               </span>
@@ -97,12 +97,12 @@ const CardDetail = () => {
             <div>
               <i>
                 <b>
-                  Để tránh sự nhầm lẫn khi giao dịch Cty Hoa Mai khuyến cáo:
+                  Để tránh sự nhầm lẫn khi giao dịch Shop 2nd khuyến cáo:
                 </b>
                 <br />- Hợp đồng ký kết phải có <b>dấu đỏ của Công ty</b>.<br />
                 - <b>Email</b>Dothanhphuoc03@gmail.com
                 <br />- Ngoài giờ làm việc (từ 18:00 đến 8:00 sáng hôm sau), để
-                đặt xe vui lòng gọi trực tiếp 0389165923, xin cám ơn
+                đặt xe vui lòng gọi trực tiếp 0876783210, xin cám ơn
               </i>
             </div>
             <div>
@@ -111,7 +111,7 @@ const CardDetail = () => {
             <div>
               <span style={{'font-weight':'bold','text-align':'center', 'font-size':'18px', 'padding-left':'30px', 'padding-top':'20px'}}>
                 {" "}
-                0913.21.87.72 / 0972.84.72.72{" "}
+                0876.78.32.10 / 0972.84.72.72{" "}
               </span>
             </div>
           </div>
@@ -126,7 +126,7 @@ const CardDetail = () => {
           <b>Công ty</b>: {dataCar?.carcompany}
         </p>
         <p >
-          <b>Loại xe</b>: {dataCar?.cartype}
+          <b>Loại sản phẩm</b>: {dataCar?.cartype}
         </p>
         <div>
         {isPedding ? <Button className="btn btn-primary" variant="contained" color="primary" >Đang thuê</Button> : 
@@ -146,7 +146,7 @@ const CardDetail = () => {
             Thuê Xe
           </Link> : <Button className="btn btn-primary" variant="contained" color="primary" >Bạn cần đăng nhập</Button>}
           <div>
-            <label htmlFor="">Thêm tài xế riêng</label>
+            <label htmlFor="">Thêm vận chuyển riêng</label>
             <Checkbox
               value={addCarDriver}
               onChange={(e) => setAddCarDriver((pre) => !pre)}
@@ -158,7 +158,7 @@ const CardDetail = () => {
           className="text-wrap text-[18px]"
           color="textPrimary" 
         >
-          <p>Thông tin về xe: </p>
+          <p>Thông tin về sản phẩm: </p>
           <div dangerouslySetInnerHTML={{ __html: dataCar?.description }}></div>
         </div>
       </div>

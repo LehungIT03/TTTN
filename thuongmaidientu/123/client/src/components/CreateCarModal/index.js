@@ -36,8 +36,11 @@ export default function CreateCarModal() {
   }, [data, dispatch, onClose]);
 
   const body = (
-    <div id="simple-modal-carname" className="bg-white mx-auto w-[500px] mt-20 p-10">
-      <h2>Thêm xe mới</h2>
+    <div
+      id="simple-modal-carname"
+      className="bg-white mx-auto w-[500px] mt-20 p-10"
+    >
+      <h2>Thêm sản phẩm mới</h2>
       <form
         noValidate
         autoComplete="off"
@@ -45,7 +48,7 @@ export default function CreateCarModal() {
       >
         <TextField
           required
-          placeholder="Tên xe"
+          placeholder="Tên sản phẩm"
           value={data.carname}
           onChange={(e) => setData({ ...data, carname: e.target.value })}
           InputProps={{
@@ -56,7 +59,7 @@ export default function CreateCarModal() {
         />
         <TextField
           required
-          placeholder="Giá xe"
+          placeholder="Giá sản phẩm"
           value={data.pricerent}
           type="number"
           onChange={(e) => setData({ ...data, pricerent: e.target.value })}
@@ -68,7 +71,7 @@ export default function CreateCarModal() {
         />
         <TextField
           required
-          placeholder="Loại xe"
+          placeholder="Loại sản phẩm"
           value={data.cartype}
           onChange={(e) => setData({ ...data, cartype: e.target.value })}
           InputProps={{
@@ -79,7 +82,7 @@ export default function CreateCarModal() {
         />
         <TextField
           required
-          placeholder="Hãng xe"
+          placeholder="Hãng sản phẩm"
           value={data.carcompany}
           onChange={(e) => setData({ ...data, carcompany: e.target.value })}
           InputProps={{
@@ -92,7 +95,7 @@ export default function CreateCarModal() {
           multiline
           rows={5}
           required
-          placeholder="Hãng xe"
+          placeholder="Hãng sản phẩm"
           value={data.description}
           onChange={(e) => setData({ ...data, description: e.target.value })}
           InputProps={{
@@ -103,8 +106,8 @@ export default function CreateCarModal() {
         />
         <FileBase64
           accept="image/*"
-          multiple={false} 
-          type="file" 
+          multiple={false}
+          type="file"
           value={data.image}
           onDone={({ base64 }) => setData({ ...data, image: base64 })}
         />
