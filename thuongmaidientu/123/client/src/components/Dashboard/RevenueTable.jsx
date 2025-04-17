@@ -91,8 +91,8 @@ const RevenueTable = () => {
             <TableRow>
               <TableCell>Mã giao dịch</TableCell>
               <TableCell>Người thuê</TableCell>
-              <TableCell>Tên xe</TableCell>
-              <TableCell>Hãng xe</TableCell>
+              <TableCell>Tên sản phẩm</TableCell>
+              <TableCell>Hãng sản phẩm</TableCell>
               <TableCell>Đơn giá</TableCell>
               <TableCell>Số ngày thuê</TableCell>
               <TableCell>Tổng tiền</TableCell>

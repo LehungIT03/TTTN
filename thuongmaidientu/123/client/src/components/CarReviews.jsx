@@ -52,7 +52,7 @@ const CarReviews = ({ carId }) => {
   return (
     <Box sx={{ padding: 4 }}>
       <Typography variant="h4" gutterBottom>
-        Car Reviews
+        Đánh giá sản phẩm
       </Typography>
 
       {/* List of Reviews */}

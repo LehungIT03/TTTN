@@ -98,13 +98,13 @@ const AdminCar = () => {
 
   return (
     <div>
-      <h2>Quản lý xe</h2>
+      <h2>Quản lý sản phẩm</h2>
       <div className="flex gap-4 flex-col w-full " style={{width: '100%'}}>
         <div className="flex w-full justify-between gap-4" style={{width: '100%'}}>
           <TextField 
             sx={{ fontSize: "12px", width: '100%' }}
             className="w-full"
-            label="Tên xe"
+            label="Tên sản phẩm"
             value={carData.carname}
             onChange={(e) =>
               setCarData({ ...carData, carname: e.target.value })
@@ -122,7 +122,7 @@ const AdminCar = () => {
           <TextField
             sx={{ fontSize: "12px", width: '100%' }}
             className="w-full"
-            label="Loại xe"
+            label="Loại sản phẩm"
             value={carData.cartype}
             onChange={(e) =>
               setCarData({ ...carData, cartype: e.target.value })
@@ -131,7 +131,7 @@ const AdminCar = () => {
           <TextField
             sx={{ fontSize: "12px", width: '100%' }}
             className="w-full"
-            label="Hãng xe"
+            label="Hãng sản phẩm"
             value={carData.carcompany}
             onChange={(e) =>
               setCarData({ ...carData, carcompany: e.target.value })
@@ -160,12 +160,12 @@ const AdminCar = () => {
           />
           {!setIsEditCar && (
             <Button onClick={handleCreate} variant="contained" color="primary">
-              Thêm xe
+              Thêm sản phẩm
             </Button>
           )}
           {setIsEditCar && (
             <Button onClick={handleEdit} variant="contained" color="warning">
-              Sửa xe
+              Sửa sản phẩm
             </Button>
           )}
           {setIsEditCar && (
@@ -183,11 +183,11 @@ const AdminCar = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Ảnh xe</TableCell>
-              <TableCell>Tên xe</TableCell>
+              <TableCell>Ảnh sản phẩm</TableCell>
+              <TableCell>Tên sản phẩm</TableCell>
               <TableCell>Giá thuê</TableCell>
-              <TableCell>Loại xe</TableCell>
-              <TableCell>Hãng xe</TableCell>
+              <TableCell>Loại sản phẩm</TableCell>
+              <TableCell>Hãng sản phẩm</TableCell>
               <TableCell>Mô tả</TableCell>
               <TableCell>Thao tác</TableCell>
             </TableRow>
@@ -252,7 +252,7 @@ const AdminCar = () => {
         <DialogTitle>Xác nhận xóa</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Bạn có chắc chắn muốn xóa xe {selectedCar && selectedCar.carname}{" "}
+            Bạn có chắc chắn muốn xóa sản phẩm {selectedCar && selectedCar.carname}{" "}
             không?
           </DialogContentText>
         </DialogContent>

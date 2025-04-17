@@ -19,7 +19,7 @@ const MostRentedCars = () => {
 
   return (
     <div className="most-rented-container">
-      <h1 className="title">Most Rented Cars</h1>
+      <h1 className="title">Most Rented Products</h1>
       <div className="cars-list">
         {cars.map((car, index) => (
           <div key={index} className="car-item">

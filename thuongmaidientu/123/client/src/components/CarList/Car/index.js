@@ -95,16 +95,16 @@ export default function Car({ car }) {
         </div>
         <div class="namepriceduc px-[10px]">
           <label>
-            <span>Tên xe: </span>
+            <span>Tên sản phẩm: </span>
             <strong>{car.carname}</strong>
           </label>
           <label>
-            <span> Loại xe: </span>
+            <span> Loại sản phẩmphẩm: </span>
             <strong>{car.cartype}</strong>
             <span> đ </span>
           </label>
           <label>
-            <span>Hãng xe: </span>
+            <span>Hãng sản phẩm: </span>
             <strong>{car.carcompany}</strong>
           </label>
           <Link
@@ -119,7 +119,7 @@ export default function Car({ car }) {
               car.pricerent
             }
           >
-            Thuê Xe
+            Thuê sản phẩm
           </Link>
         </div>
       </div>

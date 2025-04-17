@@ -98,7 +98,7 @@ export default function RentCarPage() {
     contract.carReturnDate = calculateReturnDate(contract.getCarDate, contract.dayrent)
     contract.totalprice =
       contract.dayrent * contract.pricerent +
-      (carDriver == "true" ? 1000000 : 0);
+      (carDriver == "true" ? 100000 : 0);
     
     axios
       .post("http://localhost:5000/contracts/", contract)
@@ -167,7 +167,7 @@ export default function RentCarPage() {
           className={` w-full flex flex-col gap-4 mx-auto mt-10 shadow-md p-8 rounded-md container-form-contract`}
         >
           <h1>Lập hợp đồng</h1>
-          {carDriver == "true" && <div>Có tài xế + 1.000.000 Đ</div>}
+          {carDriver == "true" && <div>Có vận chuyển + 100.000 Đ</div>}
           <div className="flex w-full gap-4">
           <div className="flex w-full flex-col gap-4">
           <TextField
@@ -224,7 +224,7 @@ export default function RentCarPage() {
             onChange={(e) =>
               setContract({ ...contract, getCarDate: e.target.value })
             }
-            label="Ngày lấy xe"
+            label="Ngày lấy sản phẩm"
           />
           </div>
           <div className="flex flex-col gap-4 w-full"> 
@@ -232,7 +232,7 @@ export default function RentCarPage() {
             type="date"
             name="carReturnDate"
             value={calculateReturnDate(contract.getCarDate, contract.dayrent)}
-            label="Ngày trả xe"
+            label="Ngày trả sản phẩm"
           />
 
           <TextField
@@ -297,13 +297,13 @@ export default function RentCarPage() {
           >
             <h2 className="font-bold text-[20px]">Xác nhận đặt cọc</h2>
             <div className="flex flex-col mt-4">
-              <h1>Thông tin đặt xe</h1>
+              <h1>Thông tin đặt sản phẩm</h1>
               <p>Tên người đặt: {contract.name}</p>
               <p>Địa chỉ: {contract.address}</p>
-              <p>Tên xe: {contract.carname}</p>
+              <p>Tên sản phẩm: {contract.carname}</p>
               <p>Ngày đặt: {new Date(Date.now()).toLocaleDateString()}</p>
-              <p>Ngày lấy xe: {contract.getCarDate}</p>
-              <p>Ngày trả xe: {calculateReturnDate(contract.getCarDate, contract.dayrent)}</p>
+              <p>Ngày lấy sản phẩm: {contract.getCarDate}</p>
+              <p>Ngày trả sản phẩm: {calculateReturnDate(contract.getCarDate, contract.dayrent)}</p>
               <p>Tiền đặt cọc: {contract.deposits} </p>
             </div>
             <div className="flex mt-10 gap-10 ml-auto">
@@ -311,7 +311,7 @@ export default function RentCarPage() {
                 Hủy
               </Button>
               <Button onClick={() => setOpen(true)} variant="contained" color="success">
-                Đặt cọc xe
+                Đặt cọc sản phẩm
               </Button>
             </div>
 
