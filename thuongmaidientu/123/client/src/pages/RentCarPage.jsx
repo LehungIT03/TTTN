@@ -174,8 +174,8 @@ export default function RentCarPage() {
             disabled
             type="text"
             name="carname"
-            value={contract.carname}
-            label="Tên xe"
+            value={contract.carname}  
+            label="Tên sản phẩm"
             onChange={(e) =>
               setContract({ ...contract, carname: e.target.value })
             }
@@ -186,7 +186,7 @@ export default function RentCarPage() {
             type="number"
             name="CarPrice"
             value={contract.pricerent}
-            label="Giá thuê xe"
+            label="Giá thuê"
             onChange={(e) =>
               setContract({ ...contract, pricerent: e.target.value })
             }
@@ -278,7 +278,7 @@ export default function RentCarPage() {
             variant="contained"
             onClick={() => setIsOnline(true)}
           >
-            Đặt xe
+            Đặt sản phẩm
           </Button>
         </div>
         <Modal onClose={() => setIsOnline(false)} open={isOnline}>
