@@ -69,7 +69,7 @@ const CardDetail = () => {
 
           <div class="col-xs-12 col-md-6">
             <div class="col-xs-12 col-md-12">
-              Đặt sản phẩm xin gọi:{" "}
+              Đặt sản phẩm xin gọi: {" "}
               <a
                 href="tel:0876783210"
                 color="#990000"
@@ -143,7 +143,7 @@ const CardDetail = () => {
               addCarDriver
             }
           >
-            Thuê Xe
+            Thuê
           </Link> : <Button className="btn btn-primary" variant="contained" color="primary" >Bạn cần đăng nhập</Button>}
           <div>
             <label htmlFor="">Thêm vận chuyển riêng</label>
