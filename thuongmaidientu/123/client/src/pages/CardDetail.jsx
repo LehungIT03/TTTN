@@ -49,7 +49,7 @@ const CardDetail = () => {
         style={{ margin: '0 2%', width: "100%", height: "300px" }}
       >
         <h1 style={{ "font-size": "14px", "font-weight": "bold" }}>
-          Cho thuê xe {dataCar?.carname}
+          Cho thuê sản phẩm {dataCar?.carname}
         </h1>
         <div className="mt-10">
           <img
@@ -102,7 +102,7 @@ const CardDetail = () => {
                 <br />- Hợp đồng ký kết phải có <b>dấu đỏ của Công ty</b>.<br />
                 - <b>Email</b>Dothanhphuoc03@gmail.com
                 <br />- Ngoài giờ làm việc (từ 18:00 đến 8:00 sáng hôm sau), để
-                đặt xe vui lòng gọi trực tiếp 0876783210, xin cám ơn
+                đặt sản phẩm vui lòng gọi trực tiếp 0876783210, xin cám ơn
               </i>
             </div>
             <div>
